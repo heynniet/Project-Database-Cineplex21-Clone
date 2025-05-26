@@ -1,0 +1,482 @@
+/* Promotions Page Specific Styles */
+
+/* Promotion Filter Styles */
+.promotion-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+}
+
+.filter-group label {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.filter-select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-family: inherit;
+    min-width: 180px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    width: 200px;
+}
+
+.search-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* Promotion Tabs */
+.promotion-tabs {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.tab-btn {
+    padding: 15px 20px;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
+}
+
+.tab-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.tab-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Featured Promotion */
+.featured-promotion {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 40px;
+}
+
+.featured-content {
+    padding: 30px;
+    flex: 1;
+}
+
+.featured-tag {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.featured-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.period {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.period i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.promotion-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-details, .btn-buy {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-details {
+    background: #f0f0f0;
+    color: var(--text-color);
+}
+
+.btn-buy {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-details:hover {
+    background: #e0e0e0;
+}
+
+.btn-buy:hover {
+    background: #c50812;
+}
+
+.featured-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Promotion Grid */
+.promotion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.promotion-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.promotion-card:hover {
+    transform: translateY(-5px);
+}
+
+.promotion-image {
+    position: relative;
+    height: 180px;
+}
+
+.promotion-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promotion-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: white;
+}
+
+.promotion-tag.bank {
+    background-color: #4CAF50;
+}
+
+.promotion-tag.food {
+    background-color: #FF9800;
+}
+
+.promotion-tag.ticket {
+    background-color: #2196F3;
+}
+
+.promotion-tag.membership {
+    background-color: #9C27B0;
+}
+
+.promotion-info {
+    padding: 20px;
+}
+
+.promotion-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    height: 42px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.promotion-info .period {
+    margin-bottom: 10px;
+}
+
+.promotion-info .description {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    height: 60px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.read-more i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover i {
+    transform: translateX(3px);
+}
+
+/* Bank Partner Section */
+.bank-partners {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.bank-partner-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.bank-partner-card:hover {
+    transform: translateY(-5px);
+}
+
+.bank-partner-card img {
+    width: 120px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.partner-info {
+    margin-bottom: 15px;
+}
+
+.partner-info h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.partner-info p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Subscribe Section */
+.promo-subscribe {
+    display: flex;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 40px;
+}
+
+.subscribe-content {
+    padding: 30px;
+    flex: 1;
+}
+
+.subscribe-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.subscribe-content p {
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.subscribe-form {
+    display: flex;
+    max-width: 500px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-family: inherit;
+}
+
+.btn-subscribe {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0 4px 4px 0;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-subscribe:hover {
+    background-color: #c50812;
+}
+
+.subscribe-image {
+    flex: 0 0 40%;
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.subscribe-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .featured-promotion {
+        flex-direction: column;
+    }
+    
+    .featured-image {
+        max-width: 100%;
+        height: 250px;
+    }
+    
+    .bank-partners {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .promotion-filter {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .search-box {
+        width: 100%;
+    }
+    
+    .search-box input {
+        flex: 1;
+    }
+    
+    .promotion-tabs {
+        overflow-x: auto;
+    }
+    
+    .tab-btn {
+        padding: 15px;
+        white-space: nowrap;
+    }
+    
+    .promotion-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    
+    .promo-subscribe {
+        flex-direction: column;
+    }
+    
+    .subscribe-image {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .subscribe-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 576px) {
+    .promotion-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bank-partners {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .subscribe-form {
+        flex-direction: column;
+    }
+    
+    .subscribe-form input {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    
+    .btn-subscribe {
+        border-radius: 4px;
+    }
+}

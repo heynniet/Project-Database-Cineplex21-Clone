@@ -1,0 +1,6 @@
+{
+    "require": {
+        "mpdf/mpdf": "^8.2",
+        "bacon/bacon-qr-code": "^3.0"
+    }
+}

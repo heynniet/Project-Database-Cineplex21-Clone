@@ -1,0 +1,574 @@
+/* Booking Confirmation Styles */
+.booking-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.booking-header h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.booking-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.booking-status.success {
+    background-color: rgba(39, 174, 96, 0.1);
+    color: #27ae60;
+}
+
+.booking-status i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Booking Steps (already defined in your CSS, but keeping it here for reference) */
+.booking-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    color: #666;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.step.active .step-number {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.step.completed .step-number {
+    background-color: #27ae60;
+    color: white;
+}
+
+.step-connector {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #e0e0e0;
+    margin: 0 10px;
+    max-width: 100px;
+}
+
+.step-label {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+}
+
+.step.active .step-label {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.step.completed .step-label {
+    color: #27ae60;
+    font-weight: 500;
+}
+
+/* Confirmation Container Styles */
+.confirmation-container {
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.confirmation-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 30px;
+}
+
+.card-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.booking-reference {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.booking-reference span {
+    margin-right: 5px;
+    opacity: 0.8;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/* Movie Info Banner (already defined in your CSS, extending for confirmation page) */
+.movie-info-banner {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.movie-poster-small {
+    width: 120px;
+    height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.movie-poster-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-details {
+    flex: 1;
+}
+
+.movie-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.movie-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.movie-meta span {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.movie-meta .rating {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.movie-meta i {
+    margin-right: 5px;
+}
+
+.booking-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.detail-item i {
+    margin-right: 8px;
+    color: var(--primary-color);
+    width: 16px;
+}
+
+/* Ticket Card Styles */
+.ticket-card {
+    background: linear-gradient(to right, rgba(229, 9, 20, 0.05), white);
+}
+
+.ticket-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 12px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+    background-color: #f5f5f5;
+    color: var(--primary-color);
+    border-color: #ccc;
+}
+
+.btn-action i {
+    margin-right: 5px;
+}
+
+.ticket {
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.ticket:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--light-bg);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #ddd;
+}
+
+.ticket:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--light-bg);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #ddd;
+}
+
+.ticket-header {
+    padding: 15px 20px;
+    border-bottom: 1px dashed #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket-logo img {
+    height: 40px;
+}
+
+.ticket-reference {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.ticket-body {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.5fr;
+    gap: 20px;
+}
+
+.ticket-movie h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.ticket-meta {
+    display: flex;
+    gap: 10px;
+}
+
+.ticket-meta span {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.ticket-meta span:first-child {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+
+.ticket-details {
+    border-left: 1px dashed #ccc;
+    padding-left: 20px;
+}
+
+.ticket-detail {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.ticket-detail .label {
+    color: #666;
+    margin-right: 5px;
+}
+
+.ticket-detail .value {
+    font-weight: 500;
+    color: #333;
+}
+
+.ticket-qr {
+    border-left: 1px dashed #ccc;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket-qr img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.qr-instruction {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+}
+
+.ticket-footer {
+    padding: 15px 20px;
+    border-top: 1px dashed #ccc;
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Payment Card Styles */
+.payment-status {
+    display: flex;
+    align-items: center;
+}
+
+.status-indicator {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-indicator.paid {
+    background-color: rgba(39, 174, 96, 0.1);
+    color: #27ae60;
+}
+
+.payment-details {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.payment-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.payment-item:last-child {
+    border-bottom: none;
+}
+
+.payment-item.subtotal {
+    border-bottom: 2px solid #ddd;
+    font-weight: 500;
+}
+
+.payment-item.total {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.item-name {
+    color: #555;
+}
+
+.item-price {
+    font-weight: 500;
+}
+
+.payment-method, .payment-date {
+    margin-top: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.method-label, .date-label {
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+/* Actions Footer */
+.confirmation-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.btn-secondary, .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary {
+    background-color: #f5f5f5;
+    color: #555;
+    border: 1px solid #ddd;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #eee;
+}
+
+.btn-primary:hover {
+    background-color: #c50812;
+}
+
+.btn-secondary i, .btn-primary i {
+    margin-right: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .booking-reference, .payment-status, .ticket-actions {
+        margin-top: 10px;
+    }
+    
+    .ticket-body {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .ticket-details, .ticket-qr {
+        border-left: none;
+        border-top: 1px dashed #ccc;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-info-banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .booking-details {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .confirmation-actions {
+        flex-direction: column;
+    }
+    
+    .confirmation-actions a {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .booking-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .ticket-actions {
+        flex-wrap: wrap;
+    }
+    
+    .btn-action {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    
+    .ticket-card, .ticket-card * {
+        visibility: visible;
+    }
+    
+    .ticket-card {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+    
+    .ticket-actions {
+        display: none;
+    }
+    
+    .main-content {
+        padding-top: 0;
+    }
+    
+    header, footer, .booking-header, .booking-steps, 
+    .payment-card, .confirmation-actions {
+        display: none;
+    }
+}
